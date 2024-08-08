@@ -1,0 +1,38 @@
+from excelGenerator import generateExcel
+from santization import data_sanitization
+sample_data = [
+        [1, 'Kasabi Bagdi', 'Kurkuba', 2, 30, '1-7-24', 450.00, None],
+        [2, 'Kasabi Bagdi', 'Kurkuba', 2, 15, '1-7-24', 450.00, None],
+        [3, 'Mungli Soren', 'Bakhrigangya', 3, 32, '1-7-24', 450.00, None],
+        [4, 'Chaitali Khatrapal', 'Gopdal', 1, 26, '1-7-24', 350.00, None],
+         [2, 'Kasabi Bagdi', 'Kurkuba', 2, 15, '1-7-24', 450.00, None],
+        [5, 'Mungli Soren', 'Bakhrigangya', 3, 70, '1-7-24', 550.00, None],
+        [6, 'Mallicka Bagdi', 'Jodogram', 2, 16, '2-7-24', 250.00, None],
+        [7, 'Pinu Ruidas', 'Kurkuba', 1, 32, '2-7-24', 450.00, None],
+        [8, 'Laxmi Hembrom', 'Gatingghata', 2, 16, '3-7-24', 250.00, None],
+        [9, 'Rasonmi Hansda', 'Ragabpur', 1, 48, '4-7-24', 450.00, None],
+        [10, 'Rupali Siddhi', 'Dayalpur', 1, 24, '4-7-24', 350.00, None],
+        [11, 'Rasonmi Hansda', 'Ragabpur', 3, 70, '4-7-24', 560.00, None],
+        [12, 'Ankita Bagdi', 'Mallickpur', 1, 14, '4-7-24', 250.00, None],
+        [13, 'Chaitali Khatrapal', 'Gopdal', 2, 26, '5-7-24', 450.00, None],
+        [14, 'Rinki Ruidas', 'Kurkuba', 1, 32, '6-7-24', 350.00, None],
+        [15, 'Ruma Sa', 'Dasbarpur', 3, 70, '6-7-24', 550.00, None],
+        [16, 'Rinki Ruidas', 'Kurkuba', 1, 42, '7-7-24', 250.00, None],
+        [17, 'Shibarani Bag', 'Joykrishnapur', 3, 70, '7-7-24', 560.00, None],
+        [18, 'Sohamtala Khatrapal', 'Bordighi', 1, 40, '7-7-24', 450.00, None],
+        [19, 'Krishna Paramanik', 'Sonda', 2, 26, '8-7-24', 350.00, None],
+        [20, 'Sunanda Bairagya', 'Sirakpur', 1, 28, '8-7-24', 350.00, None],
+        [21, 'Rija Malik', 'Galsi', 2, 24, '9-7-24', 350.00, None],
+        [22, 'Ruma Sa', 'Dasbarpur', 1, 24, '9-7-24', 250.00, None],
+        [23, 'Nilima Karmokar', 'Khetura', 1, 18, '10-7-24', 250.00, None],
+        [24, 'Sumona Karmokar', 'Mitehpur', 3, 70, '10-7-24', 560.00, None],
+        [25, 'Rija Malik', 'Galsi', 2, 24, '11-7-24', 350.00, None],
+        [26, 'Bandana Bagdi', 'Goramba', 3, 70, '11-7-24', 560.00, None],
+        [27, 'Priya Majondar', 'Swanta', 1, 24, '13-7-24', 350.00, None],
+        [28, 'Nilima Karmokar', 'Khetura', 2, 18, '13-7-24', 250.00, None],
+        [29, 'Reba Rani Khagrai', 'Masidpur', 1, 22, '14-7-24', 350.00, None],
+        [30, 'Tansing Khutan', 'Raticha', 1, 14, '14-7-24', 250.00, None],
+        [31, 'Reba Rani Khagrai', 'Masidpur',2,8, 70, '14-7-24', 560.00, None],
+    ]
+sanitized_data=data_sanitization(sample_data)
+generateExcel(sanitized_data)
